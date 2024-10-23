@@ -1,4 +1,5 @@
 <template>
+  <Banner></Banner>
   <Wanted></Wanted>
   <Benefits></Benefits>
   <Positions></Positions>
@@ -55,6 +56,7 @@
 </template>
 
 <script setup>
+import Banner from './components/Banner.vue';
 import Wanted from './components/Wanted.vue';
 import Benefits from './components/Benefits.vue';
 import Positions from './components/Positions.vue';

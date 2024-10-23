@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full py-16 px-4 md:px-8 bg-white">
+    <section class="w-full py-16 px-4 md:px-8 bg-white font-plus-jakarta-sans">
         <!-- Title Section -->
         <div class="max-w-5xl mx-auto text-center mb-16">
             <div class="flex items-center justify-center mb-20 sm:mb-24">
@@ -14,7 +14,7 @@
         </div>
         <!-- Locations Grid -->
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-12">
                 <!-- Barranquilla -->
                 <div class="flex flex-col items-center">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
@@ -232,3 +232,13 @@
 <script setup>
 // Ya no es necesario importar los componentes SVG ni definir el arreglo de ubicaciones
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+/* Aplicar la fuente a todo el componente */
+div {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+</style>
