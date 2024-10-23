@@ -3,14 +3,14 @@
       <!-- Open Positions Header -->
       <div class="flex items-center justify-center mb-20 sm:mb-24">
         <div class="h-0.5 bg-teal-400 w-72"></div>
-        <h2 class="text-4xl font-bold text-teal-900 px-8">Open Positions</h2>
+        <h2 class="text-5xl font-bold text-teal-900 px-8">Open Positions</h2>
         <div class="h-0.5 bg-teal-400 w-72"></div>
       </div>
   
       <!-- Glassdoor Reviews Section -->
       <div class="mb-14">
         <div class="flex items-center">
-          <h3 class="text-3xl font-bold text-teal-900">Glassdoor Reviews</h3>
+          <h3 class="text-5xl font-bold text-teal-900">Glassdoor Reviews</h3>
           <div class="h-0.5 bg-teal-400 w-full ml-4"></div>
         </div>
       </div>
