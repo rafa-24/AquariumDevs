@@ -1,6 +1,29 @@
 <template>
+    <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out" :class="{ 'bg-white shadow-md': !isAtTop }">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex-shrink-0">
+            <img class="h-10 w-auto" src="https://koombea.com/wp-content/uploads/2020/08/koombea-logo.svg" alt="Koombea Logo">
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-6">
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Home</a>
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Services</a>
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Our Work</a>
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Careers</a>
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">About</a>
+              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Blog</a>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <a href="#" class="text-teal-500 hover:text-teal-600 px-4 py-2 rounded-md text-base font-medium">Get in Touch</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
     <section class="relative">
-      <div class="bg-teal-500 pt-12 md:pt-24 pb-32 md:pb-48">
+      <div class="bg-teal-500 pt-32 md:pt-40 pb-32 md:pb-48">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Grow Your Career<br>by Joining Koombea</h1>
@@ -22,6 +45,27 @@
     </section>
   </template>
   
+  <script>
+  export default {
+    data() {
+      return {
+        isAtTop: true
+      };
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+      handleScroll() {
+        this.isAtTop = window.pageYOffset === 0;
+      }
+    }
+  };
+  </script>
+  
   <style>
   @keyframes wave {
     0% {
@@ -36,7 +80,7 @@
   }
   
   .wave {
-    animation: wave 100s ease-in-out infinite;
+    animation: wave 20s ease-in-out infinite;
     width: 200%;
     height: calc(100% + 10px);
     transform: translateY(5px);
