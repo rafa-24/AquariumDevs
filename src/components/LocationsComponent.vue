@@ -1,73 +1,234 @@
 <template>
-    <div class="container mx-auto px-4 py-12 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold text-teal-700 mb-8">
-        Our Locations
-      </h1>
-      <div class="w-full max-w-4xl mx-auto mb-12">
-        <div class="h-px bg-teal-300 w-full mb-8"></div>
-        <p class="text-lg text-gray-700 mb-8">
-          Members of the Koombea team work from Chicago, Miami, Barranquilla, San
-          Francisco, New York, Bogotá, Washington, D.C., and many other places scattered
-          around the globe.
-        </p>
-        <div class="h-px bg-teal-300 w-full"></div>
+    <section class="w-full py-16 px-4 md:px-8 bg-white">
+        <!-- Title Section -->
+        <div class="max-w-5xl mx-auto text-center mb-16">
+            <div class="flex items-center justify-center mb-20 sm:mb-24">
+        <div class="h-0.5 bg-teal-400 w-72"></div>
+        <h2 class="text-5xl font-bold text-teal-900 px-8">Open Positions</h2>
+        <div class="h-0.5 bg-teal-400 w-72"></div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        <div v-for="location in locations" :key="location.name" class="flex flex-col items-center">
-          <div class="w-24 h-24 mb-4">
-            <component :is="location.icon" class="w-full h-full text-teal-500" />
-          </div>
-          <span class="text-lg font-semibold text-teal-700">{{ location.name }}</span>
+            <p class="text-lg md:text-xl text-[#003543] max-w-4xl mx-auto leading-relaxed">
+                Members of the Koombea team work from Chicago, Miami, Barranquilla, San Francisco, New York, Bogotá,
+                Washington, D.C., and many other places scattered around the globe.
+            </p>
         </div>
-      </div>
-    </div>
-  </template>
-  
-  <script setup>
-  import { defineComponent, h } from 'vue'
-  
-  const IconBarranquilla = defineComponent({
-    render: () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-      h('path', { d: 'M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' }),
-      h('polyline', { points: '9 22 9 12 15 12 15 22' })
-    ])
-  })
-  
-  const IconChicago = defineComponent({
-    render: () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-      h('path', { d: 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2' }),
-      h('circle', { cx: '12', cy: '7', r: '4' })
-    ])
-  })
-  
-  const IconMiami = defineComponent({
-    render: () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-      h('path', { d: 'M18 8h1a4 4 0 0 1 0 8h-1' }),
-      h('path', { d: 'M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z' }),
-      h('line', { x1: '6', y1: '1', x2: '6', y2: '4' }),
-      h('line', { x1: '10', y1: '1', x2: '10', y2: '4' }),
-      h('line', { x1: '14', y1: '1', x2: '14', y2: '4' })
-    ])
-  })
-  
-  const IconNewYork = defineComponent({
-    render: () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-      h('path', { d: 'M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z' })
-    ])
-  })
-  
-  const IconSanFrancisco = defineComponent({
-    render: () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, [
-      h('line', { x1: '3', y1: '12', x2: '21', y2: '12' }),
-      h('path', { d: 'M3 6h.01M21 6h.01M3 18h.01M21 18h.01' })
-    ])
-  })
-  
-  const locations = [
-    { name: 'Barranquilla', icon: IconBarranquilla },
-    { name: 'Chicago', icon: IconChicago },
-    { name: 'Miami', icon: IconMiami },
-    { name: 'New York', icon: IconNewYork },
-    { name: 'San Francisco', icon: IconSanFrancisco },
-  ]
-  </script>
+        <!-- Locations Grid -->
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12">
+                <!-- Barranquilla -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center">
+                        <!-- Barranquilla SVG -->
+                        <svg height="43" viewBox="0 0 67 43" width="67" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" transform="translate(1 1)">
+                                <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622">
+                                    <path
+                                        d="m.57348501 38.8457832c15.91310879 1.1463895 27.19143269 1.7195843 33.83497149 1.7195843 6.6435389 0 16.8520657-.5731948 30.6255807-1.7195843v-3.1337525c-12.009375 1.1970766-22.2179019 1.7956149-30.6255807 1.7956149s-19.6860026-.5985383-33.83497149-1.7956149z" />
+                                    <path
+                                        d="m5.70973395 35.9834759 2.28363598-30.64451421h50.06160267l2.4027766 30.64451421" />
+                                    <path d="m22.9239443 5.03386892 10.103769-4.3227407 9.7556851 4.3227407" />
+                                </g>
+                                <path
+                                    d="m9.34384502 16.5850112 4.62652028 12.5411569 4.7131387-12.5411569 4.8094172 12.5411569 4.7182908-12.5411569 4.8519214 12.5411569 4.6455184-12.5411569 4.7485589 12.5411569 4.6648385-12.5411569 4.9079497 12.5411569 4.5972182-12.5411569-4.5972182-3.2550778-4.9079497 2.6678632-4.6648385-2.6678632-4.7485589 2.6678632-4.6455184-2.6678632-4.8519214 2.6678632-4.7182908-2.6678632-4.8094172 2.6678632-4.7131387-2.6678632z"
+                                    fill="#0bd8a2" />
+                                <path
+                                    d="m9.34384502 16.5850112 4.62652028 12.5411569 4.7131387-12.5411569 4.8094172 12.5411569 4.7182908-12.5411569 4.8519214 12.5411569 4.6455184-12.5411569 4.7485589 12.5411569 4.6648385-12.5411569 4.9079497 12.5411569 4.5972182-12.5411569-4.5972182-3.2550778-4.9079497 2.6678632-4.6648385-2.6678632-4.7485589 2.6678632-4.6455184-2.6678632-4.8519214 2.6678632-4.7182908-2.6678632-4.8094172 2.6678632-4.7131387-2.6678632z"
+                                    stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Barranquilla</h3>
+                </div>
+
+                <!-- Chicago -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center">
+                        <!-- Chicago SVG -->
+                        <svg height="34" viewBox="0 0 62 34" width="62" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" fill-rule="evenodd" transform="translate(1)">
+                                <path
+                                    d="m20.6603706 26.9183509c2.3969846-5.133973 5.9153488-7.7009596 10.5550924-7.7009596 6.9596156 0 12.2718179 8.3220746 15.070384 9.5881242 1.8657108.844033 4.6537967 1.0599736 8.3642578.6478218-3.1640625 1.9801573-5.7345655 2.8546868-7.7115092 2.6235883-2.9654154-.3466479-7.2899199-3.0865305-9.5665014-4.8245585-2.2765816-1.738028-4.7798567-3.7602588-7.375667-3.526842-1.7305402.1556112-4.842559 1.2198864-9.3360566 3.1928258z"
+                                    fill="#0bd8a2" />
+                                <g fill-rule="nonzero" stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.72">
+                                    <path d="m.265816 32.170219h19.495998" />
+                                    <path d="m39.778011 32.170219h19.495998" />
+                                    <path
+                                        d="m9.30390149 31.5884425c6.79365951 0 13.90279641-7.8629174 20.63393191-7.8629174 6.7311357 0 8.974133 7.8629174 18.5370618 7.8629174s11.1431736-9.883704 6.7050543-15.5621602-11.9977849-15.03885023-25.6489713-15.03885023c-13.6511865 0-22.08206909 8.87533967-26.20256738 15.03885023-4.12049828 6.1635105-.81816882 15.5621602 5.97549067 15.5621602z" />
+                                    <path
+                                        d="m20.6089225 26.6695703c4.8647103-7.8168921 10.7016958-9.534884 17.5109565-5.1539759" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Chicago</h3>
+                </div>
+
+                <!-- Miami -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center">
+                        <!-- Miami SVG -->
+                        <svg height="50" viewBox="0 0 57 50" width="57" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" transform="translate(1.972973 1.216216)">
+                                <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622">
+                                    <path d="m.665118 46.778927h52.060019" />
+                                    <path
+                                        d="m4.60462416 46.7728568c4.59740991-4.0945242 10.14340514-6.1417863 16.63798564-6.1417863s12.0405757 2.0472621 16.6379856 6.1417863" />
+                                    <path
+                                        d="m33.4404033 43.4076753c1.5820312-.8921031 3.9077456-1.3381546 6.9771432-1.3381546 3.0693975 0 5.7574957 1.4987155 8.0642947 4.4961465" />
+                                    <path d="m35.727143 42.46912v-22.463445" />
+                                </g>
+                                <path
+                                    d="m18.1434755 20.0002639c2.4992962-1.0230152 4.6810776-.5423001 6.5453442 1.4421453 1.8644425-2.0944626 4.8251425-2.9956714 7.3053473 0 1.8905722-2.4646326 5.2572055-2.5167599 7.2678685.1999314.9863281-2.664564 5.5107158-3.0480627 7.3927101-.1999314.8077755-2.4646326 4.6431587-3.3928948 6.3656039-1.4421453 1.7224451 1.9507496-2.5686893-15.90002108-16.9667177-15.90002108-9.5986856 0-15.5687377 5.30000704-17.9101563 15.90002108z"
+                                    fill="#0bd8a2" />
+                                <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622">
+                                    <path
+                                        d="m18.1434755 20.0002639c2.4992962-1.0230152 4.6810776-.5423001 6.5453442 1.4421453 1.8644425-2.0944626 4.8251425-2.9956714 7.3053473 0 1.8905722-2.4646326 5.2572055-2.5167599 7.2678685.1999314.9863281-2.664564 5.5107158-3.0480627 7.3927101-.1999314.8077755-2.4646326 4.6431587-3.3928948 6.3656039-1.4421453 1.7224451 1.9507496-2.5686893-15.90002108-16.9667177-15.90002108-9.5986856 0-15.5687377 5.30000704-17.9101563 15.90002108z" />
+                                    <path d="m35.711043 3.749868v-1.817066" />
+                                    <path
+                                        d="m24.708219 20.9890995c1.0106102-9.7915787 4.6003132-15.40654918 10.7691089-16.84491137" />
+                                    <path
+                                        d="m32.0899757 21.5349187c.1200908-9.2620355 1.2610853-15.01777167 3.4229835-17.26720861" />
+                                    <path
+                                        d="m39.2472551 21.4492715c-.2369264-9.2961711-1.2856754-15.06857928-3.1462469-17.31722441" />
+                                    <path
+                                        d="m46.706345 21.0024282c-1.1866554-9.465266-4.7311374-15.12963646-10.6334459-16.99311127" />
+                                    <circle cx="10.810811" cy="5.405405" r="5.405405" />
+                                    <path
+                                        d="m10.941723 34.3198374h20.1588893v3.745909h-22.01963679l-5.83694046-8.4035842 2.68871411-1.8335621z" />
+                                    <path
+                                        d="m6.7611117 28.6016681 1.78143475-.5993983 2.82741235 3.7785051-.3322952 2.1704762" />
+                                    <path d="m10.810811 38.232818v3.803315" />
+                                    <path d="m13.243243 38.232818v3.154297" />
+                                    <path d="m26.216216 38.292467v2.788614" />
+                                    <path d="m28.378378 38.292467v3.154165" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Miami</h3>
+                </div>
+
+                <!-- New York -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center">
+                        <!-- New York SVG -->
+                        <svg height="55" viewBox="0 0 38 55" width="38" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" transform="translate(.621622 1.054054)">
+                                <path
+                                    d="m35.9396115 51.3679793h-25.4067251v-3.3226879l-3.74815245-4.0646115 7.35404345-9.1752006 4.815245 2.2455659h10.19716l5.4019743 6.9296347-1.9763514 1.8691934z"
+                                    stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622" />
+                                <path
+                                    d="m10.6033573 48.0115076 3.9481091-5.0243817m2.7396672-3.4865132 1.8197986-2.315884"
+                                    stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622" />
+                                <path
+                                    d="m2.81593117 7.69188133-.70629223-5.8453864 2.23184121 1.33868243 1.66649071-2.89194467 1.28431166 2.54961993 2.21072635-.99635769-.63634924 5.8453864"
+                                    fill="#0bd8a2" />
+                                <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.621622">
+                                    <path d="m18.920107 51.319811 10.381123-13.988202" />
+                                    <path d="m30.871153 47.409206 2.009344-1.831912" />
+                                    <path
+                                        d="m28.4272065 37.1150496c0-4.5725119 0-7.9901728 0-10.2529825 0-3.3942145-2.4194996-5.7349292-5.8273068-5.7349292s-5.2441406 2.5434174-5.2441406 5.7349292v9.3702492" />
+                                    <path
+                                        d="m28.4418549 27.9473712c-1.0504645-2.3206116-2.8790118-3.4809174-5.4856419-3.4809174-2.60663 0-4.4519592 1.1603058-5.5359876 3.4809174" />
+                                    <path d="m19.391628 28.8524071 3.2861328-.7085357 3.351061.7085357" />
+                                    <path d="m22.795212 30.413851v-2.223659" />
+                                    <path d="m17.313265 25.098316-3.268713-.886164" />
+                                    <path d="m31.36732 25.098316-3.268714-.886164"
+                                        transform="matrix(-1 0 0 1 59.465926 0)" />
+                                    <path d="m17.909496 23.264754-3.855442-2.724213" />
+                                    <path d="m31.321923 23.387748-3.937263-2.705606"
+                                        transform="matrix(-1 0 0 1 58.706582 0)" />
+                                    <path d="m19.742927 21.73617-2.957929-4.838471" />
+                                    <path d="m28.645086 21.729703-2.94394-4.892182"
+                                        transform="matrix(-1 0 0 1 54.34623 0)" />
+                                    <path d="m22.858293 21.063002v-6.822213" />
+                                    <path
+                                        d="m14.1250528 34.8358319-5.64769849-18.910209v-5.435758h2.23025759v-2.62404987h-9.69145903v2.62404987h2.02412373v2.9558171c0 1.0721073 1.35055955 2.7574694 2.77462522 2.7574694.19355292 1.1710832 1.28994228 9.4352213 3.28916807 24.7924145" />
+                                    <path
+                                        d="m2.81593117 7.69188133-.70629223-5.8453864 2.23184121 1.33868243 1.66649071-2.89194467 1.28431166 2.54961993 2.21072635-.99635769-.63634924 5.8453864" />
+                                    <path d="m5.883063 16.206055h2.544473" />
+                                    <path d="m3.205039 10.504447h5.373469" />
+                                    <path
+                                        d="m17.4036634 30.3130279c.7932151 3.096143 2.5675676 4.6442145 5.3230575 4.6442145" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">New York</h3>
+                </div>
+
+                <!-- San Francisco -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 mb-4 flex items-center justify-center">
+                        <!-- San Francisco SVG -->
+                        <svg height="45" viewBox="0 0 73 45" width="73" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" transform="translate(1.405405 .459459)">
+                                <g stroke="#00343d">
+                                    <path
+                                        d="m4.62847076 38.2883167c.74993841.4743465 1.51159997.7115198 2.28498469.7115198 1.16007707 0 2.2286278-1.4230397 3.74460255-1.4230397 1.5159747 0 2.6364218 1.4230397 4.1139674 1.4230397 1.4775457 0 2.0125974-1.4230397 4.0450869-1.4230397s2.077004 1.4230397 4.0886626 1.4230397 1.8972779-1.4230397 3.9585357-1.4230397 2.1784884 1.4230397 4.2850111 1.4230397c2.1065226 0 2.1382045-1.4230397 4.1417599-1.4230397s1.8941684 1.4230397 3.8736143 1.4230397c1.979446 0 2.0016528-1.4230397 4.0434571-1.4230397 2.0418042 0 2.0809158 1.4230397 4.1234032 1.4230397s2.0431289-1.4230397 4.0468882-1.4230397 1.9327626 1.4230397 3.968486 1.4230397 2.3910935-1.4230397 4.0441433-1.4230397 2.5955052 1.4230397 3.837244 1.4230397c.8278258 0 1.5601795-.2371733 2.197061-.7115198"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.621622" />
+                                    <path
+                                        d="m4.62847076 42.4731467c.74993841.4743465 1.51159997.7115198 2.28498469.7115198 1.16007707 0 2.2286278-1.4230397 3.74460255-1.4230397 1.5159747 0 2.6364218 1.4230397 4.1139674 1.4230397 1.4775457 0 2.0125974-1.4230397 4.0450869-1.4230397s2.077004 1.4230397 4.0886626 1.4230397 1.8972779-1.4230397 3.9585357-1.4230397 2.1784884 1.4230397 4.2850111 1.4230397c2.1065226 0 2.1382045-1.4230397 4.1417599-1.4230397s1.8941684 1.4230397 3.8736143 1.4230397c1.979446 0 2.0016528-1.4230397 4.0434571-1.4230397 2.0418042 0 2.0809158 1.4230397 4.1234032 1.4230397s2.0431289-1.4230397 4.0468882-1.4230397 1.9327626 1.4230397 3.968486 1.4230397 2.3910935-1.4230397 4.0441433-1.4230397 2.5955052 1.4230397 3.837244 1.4230397c.8278258 0 1.5601795-.2371733 2.197061-.7115198"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.621622" />
+                                    <path
+                                        d="m.64094172 21.718171h15.78636378m2.7542823 0h31.5505965m3.0446448 0h15.4594594"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.621622" />
+                                    <path
+                                        d="m.69137986 24.3546344h15.69500894m2.9417098 0h31.5567726m2.7643185 0h15.6310178"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.621622" />
+                                </g>
+                                <path d="m16.5025338 33.4081435v-29.90835465h2.6694468v29.90835465" fill="#0bd8a2" />
+                                <path d="m50.9349662 33.4081435v-29.90835465h2.6694468v29.90835465" fill="#0bd8a2" />
+                                <g stroke="#00343d" stroke-width="1.621622">
+                                    <path
+                                        d="m.44433594 19.0338587c8.44638584-.2649575 13.80009066-4.4992825 16.06111436-12.70297515"
+                                        stroke-linecap="round" />
+                                    <path
+                                        d="m19.2104096 6.4679599c2.8762317 8.5182587 8.1776112 12.777388 15.9041385 12.777388 7.7265274 0 12.9782693-4.2591293 15.755226-12.777388"
+                                        stroke-linecap="round" />
+                                    <path d="m4.938477 21.568835v-2.726713" />
+                                    <path d="m9.06085 21.652783v-4.549742" />
+                                    <path d="m13.510043 21.481991v-8.660841" />
+                                    <path d="m22.339461 21.565599v-8.667992" />
+                                    <path d="m26.477961 21.533416v-4.450639" />
+                                    <path d="m30.657807 21.405705v-2.517607" />
+                                    <path d="m35.134964 21.568324v-2.250947" />
+                                    <path d="m39.449654 21.588417v-2.41663" />
+                                    <path d="m43.649572 21.555382v-4.526925" />
+                                    <path d="m48.039749 21.424436v-8.690299" />
+                                    <path
+                                        d="m53.741145 6.43339282c2.806579 8.39996998 7.7715899 12.59995508 14.8950327 12.59995508"
+                                        stroke-linecap="round" />
+                                    <path d="m65.223369 21.599996v-2.81611" />
+                                    <path d="m60.970096 21.564577v-4.594015" />
+                                    <path d="m56.720254 21.72345v-8.748706" />
+                                    <g stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m15.4594595 37.9938154v-4.5151755h4.7511349v3.9059095" />
+                                        <path d="m17.838287 3.450918v-2.559666" />
+                                        <path d="m49.8918919 37.9938154v-4.5151755h4.7511349v5.1854022" />
+                                        <path d="m16.5025338 33.4081435v-29.90835465h2.6694468v29.90835465" />
+                                        <path d="m50.9349662 33.4081435v-29.90835465h2.6694468v29.90835465" />
+                                        <path d="m52.270719 3.450918v-2.559666" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">San Francisco</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<script setup>
+// Ya no es necesario importar los componentes SVG ni definir el arreglo de ubicaciones
+</script>

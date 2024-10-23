@@ -2,7 +2,7 @@
   <Wanted></Wanted>
   <Benefits></Benefits>
   <Positions></Positions>
-  
+  <LocationsComponent></LocationsComponent>
   <div class="max-w-7xl mx-auto px-4 py-8">
     <!-- Title with decorative lines -->
     <div class="flex items-center justify-center mb-8">
@@ -58,6 +58,7 @@
 import Wanted from './components/Wanted.vue';
 import Benefits from './components/Benefits.vue';
 import Positions from './components/Positions.vue';
+import LocationsComponent from './components/LocationsComponent.vue';
 import Footer from './components/Footer.vue';
 </script>
 
