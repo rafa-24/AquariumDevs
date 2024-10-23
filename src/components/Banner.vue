@@ -42,7 +42,15 @@
           <path fill="#FFFFFF" fill-opacity="1" d="M0,288L30,293.3C60,299,120,309,180,304C240,299,300,277,360,250.7C420,224,480,192,540,192C600,192,660,224,720,245.3C780,267,840,277,900,256C960,235,1020,181,1080,160C1140,139,1200,149,1260,154.7C1320,160,1380,160,1410,160L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
         </svg>
       </div>
+
+
     </section>
+
+    <div>
+      <div class="flex flex-col md:flex-row md:items-center items-center justify-center pt-14 px-4">
+        <p class="text-xl font-bold text-teal-900 text-center align-center items-center">Koombea is an incredibly fun and fast-paced place to work, where the only <br class="mr-2"> currency that matters is the ability to be creative and drive results.</p>
+        </div>
+      </div>
   </template>
   
   <script>
@@ -80,7 +88,7 @@
   }
   
   .wave {
-    animation: wave 20s ease-in-out infinite;
+    animation: wave 40s ease-in-out infinite;
     width: 200%;
     height: calc(100% + 10px);
     transform: translateY(5px);
