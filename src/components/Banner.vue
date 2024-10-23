@@ -7,12 +7,12 @@
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-6">
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Home</a>
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Services</a>
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Our Work</a>
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Careers</a>
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">About</a>
-              <a href="#" class="text-gray-500 hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Blog</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Home</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Services</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Our Work</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Careers</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">About</a>
+              <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="hover:text-teal-500 px-3 py-2 rounded-md text-base font-medium">Blog</a>
             </div>
           </div>
           <div class="hidden md:block">
