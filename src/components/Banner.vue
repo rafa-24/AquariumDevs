@@ -88,7 +88,7 @@
               Grow Your Career<br>by Joining Koombea
             </h1>
             <p class="text-lg md:text-xl text-center md:text-left text-white mb-8">
-              Koombea is an incredibly fun and fast-paced place to work, where the<br class="hidden md:inline">
+              Koombea is an incredibly fun and fast-paced place to work, where the 
               only currency that matters is the ability to be creative and drive results.
             </p>
             <button

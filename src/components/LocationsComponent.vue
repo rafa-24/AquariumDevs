@@ -3,22 +3,24 @@
         <!-- Title Section -->
         <div class="max-w-5xl mx-auto text-center mb-16">
             <div class="flex items-center justify-center mb-20 sm:mb-24">
-        <div class="h-0.5 bg-teal-400 w-72"></div>
-        <h2 class="text-5xl font-bold text-teal-900 px-8">Our Locations</h2>
-        <div class="h-0.5 bg-teal-400 w-72"></div>
-      </div>
+                <div class="h-0.5 bg-teal-400 w-72"></div>
+                <h2 class="text-5xl font-bold text-teal-900 px-8">Our Locations</h2>
+                <div class="h-0.5 bg-teal-400 w-72"></div>
+            </div>
             <p class="text-lg md:text-xl text-[#003543] max-w-4xl mx-auto leading-relaxed">
                 Members of the Koombea team work from Chicago, Miami, Barranquilla, San Francisco, New York, Bogotá,
                 Washington, D.C., and many other places scattered around the globe.
             </p>
         </div>
+
         <!-- Locations Grid -->
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-12">
                 <!-- Barranquilla -->
-                <div class="flex flex-col items-center">
+                <div
+                    class="flex flex-col items-center p-6 rounded-lg border border-transparent hover:border-1 hover:shadow-lg transition group">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
-                        <!-- Barranquilla SVG -->
+                        <!-- Aquí iría el SVG de Barranquilla -->
                         <svg height="43" viewBox="0 0 67 43" width="67" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" transform="translate(1 1)">
                                 <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
@@ -39,13 +41,17 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Barranquilla</h3>
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-[#003543] text-center transition-colors duration-300 group-hover:text-[#0bd8a2]">
+                        Barranquilla
+                    </h3>
                 </div>
 
                 <!-- Chicago -->
-                <div class="flex flex-col items-center">
+                <div
+                    class="flex flex-col items-center p-6 rounded-lg border border-transparent hover:border-1 hover:shadow-lg transition group">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
-                        <!-- Chicago SVG -->
+                        <!-- Aquí iría el SVG de Chicago -->
                         <svg height="34" viewBox="0 0 62 34" width="62" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" fill-rule="evenodd" transform="translate(1)">
                                 <path
@@ -63,13 +69,17 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Chicago</h3>
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-[#003543] text-center transition-colors duration-300 group-hover:text-[#0bd8a2]">
+                        Chicago
+                    </h3>
                 </div>
 
                 <!-- Miami -->
-                <div class="flex flex-col items-center">
+                <div
+                    class="flex flex-col items-center p-6 rounded-lg border border-transparent hover:border-1 hover:shadow-lg transition group">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
-                        <!-- Miami SVG -->
+                        <!-- Aquí iría el SVG de Miami -->
                         <svg height="50" viewBox="0 0 57 50" width="57" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" transform="translate(1.972973 1.216216)">
                                 <g stroke="#00343d" stroke-linecap="round" stroke-linejoin="round"
@@ -110,13 +120,17 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Miami</h3>
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-[#003543] text-center transition-colors duration-300 group-hover:text-[#0bd8a2]">
+                        Miami
+                    </h3>
                 </div>
 
                 <!-- New York -->
-                <div class="flex flex-col items-center">
+                <div
+                    class="flex flex-col items-center p-6 rounded-lg border border-transparent hover:border-1 hover:shadow-lg transition group">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
-                        <!-- New York SVG -->
+                        <!-- Aquí iría el SVG de New York -->
                         <svg height="55" viewBox="0 0 38 55" width="38" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" transform="translate(.621622 1.054054)">
                                 <path
@@ -162,13 +176,17 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">New York</h3>
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-[#003543] text-center transition-colors duration-300 group-hover:text-[#0bd8a2]">
+                        New York
+                    </h3>
                 </div>
 
                 <!-- San Francisco -->
-                <div class="flex flex-col items-center">
+                <div
+                    class="flex flex-col items-center p-6 rounded-lg border border-transparent hover:border-1 hover:shadow-lg transition group">
                     <div class="w-24 h-24 mb-4 flex items-center justify-center">
-                        <!-- San Francisco SVG -->
+                        <!-- Aquí iría el SVG de San Francisco -->
                         <svg height="45" viewBox="0 0 73 45" width="73" xmlns="http://www.w3.org/2000/svg">
                             <g fill="none" transform="translate(1.405405 .459459)">
                                 <g stroke="#00343d">
@@ -222,23 +240,12 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">San Francisco</h3>
+                    <h3
+                        class="text-lg md:text-xl font-semibold text-[#003543] text-center transition-colors duration-300 group-hover:text-[#0bd8a2]">
+                        San Francisco
+                    </h3>
                 </div>
             </div>
         </div>
     </section>
 </template>
-
-<script setup>
-// Ya no es necesario importar los componentes SVG ni definir el arreglo de ubicaciones
-</script>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
-
-/* Aplicar la fuente a todo el componente */
-div {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-</style>
