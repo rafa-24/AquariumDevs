@@ -18,11 +18,7 @@
       <!-- Large image - 3 columns -->
       <div class="lg:col-span-3 lg:row-span-2">
         <div class="h-full">
-          <img 
-            src="../assets/img/cafe.jpg"
-            alt="Team meeting"
-            class="w-full h-[99%] object-cover rounded"
-          />
+          <img src="../assets/img/cafe.jpg" alt="Team meeting" class="w-full h-[99%] object-cover rounded" />
         </div>
       </div>
 
@@ -30,19 +26,11 @@
       <div class="lg:col-span-2 space-y-4">
         <!-- Top image -->
         <div class="aspect-w-16 aspect-h-9">
-          <img 
-            src="../assets/img/cafe.jpg"
-            alt="Small team discussion"
-            class="w-full h-full object-cover rounded"
-          />
+          <img src="../assets/img/cafe.jpg" alt="Small team discussion" class="w-full h-full object-cover rounded" />
         </div>
         <!-- Bottom image -->
         <div class="aspect-w-16 aspect-h-9">
-          <img 
-            src="../assets/img/cafe.jpg"
-            alt="Team collaboration"
-            class="w-full h-full object-cover rounded"
-          />
+          <img src="../assets/img/cafe.jpg" alt="Team collaboration" class="w-full h-full object-cover rounded" />
         </div>
       </div>
     </div>

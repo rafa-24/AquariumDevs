@@ -1,5 +1,5 @@
 <template>
-  
+
   <footer class="bg-[#0bd8a2] text-gray-800 py-16 px-4 md:px-8 font-custom">
     <div class="max-w-7xl mx-auto">
       <!-- Top Section -->

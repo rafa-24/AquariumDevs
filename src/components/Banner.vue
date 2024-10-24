@@ -1,5 +1,5 @@
 <template>
- <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out font-plus-jakarta-sans"
+  <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out font-plus-jakarta-sans"
     :class="{ 'bg-white shadow-md': !isAtTop }">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex items-center justify-between w-full">
@@ -88,7 +88,7 @@
               Grow Your Career<br>by Joining Koombea
             </h1>
             <p class="text-lg md:text-xl text-center md:text-left text-white mb-8">
-              Koombea is an incredibly fun and fast-paced place to work, where the 
+              Koombea is an incredibly fun and fast-paced place to work, where the
               only currency that matters is the ability to be creative and drive results.
             </p>
             <button
