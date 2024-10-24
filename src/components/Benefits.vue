@@ -20,7 +20,7 @@
       <!-- Flexible Work Hours -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M20 10h-6a2 2 0 00-2 2v40M50 10h6a2 2 0 012 2v40M20 30h24M20 20h24M20 40h14" stroke-linecap="round"/>
           </svg>
         </div>
@@ -33,7 +33,7 @@
       <!-- Casual Every Day -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M32 12v40M20 24h24M24 44l8-8 8 8" stroke-linecap="round"/>
           </svg>
         </div>
@@ -46,7 +46,7 @@
       <!-- Health Insurance -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M32 16l4 8 8 1-6 6 2 8-8-4-8 4 2-8-6-6 8-1 4-8z"/>
           </svg>
         </div>
@@ -59,7 +59,7 @@
       <!-- Healthy Food -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M24 16c0 8.837 7.163 16 16 16s16-7.163 16-16M12 16h40M16 48h32" stroke-linecap="round"/>
           </svg>
         </div>
@@ -72,7 +72,7 @@
       <!-- Further your skill sets -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="32" cy="32" r="24"/>
             <path d="M32 20v24M20 32h24" stroke-linecap="round"/>
           </svg>
@@ -86,7 +86,7 @@
       <!-- Entertainment Spaces -->
       <div>
         <div class="flex justify-start mb-6">
-          <svg class="w-16 h-16 text-teal-500" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <svg class="w-16 h-16 text-[#050A30] " viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="12" y="12" width="40" height="40" rx="4"/>
             <path d="M24 32l4 4 12-12" stroke-linecap="round"/>
           </svg>

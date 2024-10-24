@@ -26,7 +26,7 @@
             <!-- Cards with consistent style -->
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <rect x="3" y="3" width="18" height="14" rx="2"/>
                   <path d="M7 8h10M7 12h6" stroke-linecap="round"/>
                 </svg>
@@ -36,7 +36,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <rect x="7" y="3" width="10" height="18" rx="2"/>
                   <circle cx="12" cy="17" r="1" fill="currentColor"/>
                 </svg>
@@ -46,7 +46,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M15 4v16M8 12h7" stroke-linecap="round"/>
                 </svg>
               </div>
@@ -55,7 +55,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M9 12l2 2 4-4" stroke-linecap="round"/>
                 </svg>
               </div>
@@ -64,7 +64,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <circle cx="12" cy="12" r="8"/>
                   <path d="M12 8v8M8 12h8" stroke-linecap="round"/>
                 </svg>
@@ -74,7 +74,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M8 8l4 4-4 4M14 16h4" stroke-linecap="round"/>
                 </svg>
               </div>
@@ -83,7 +83,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M4 8h16M4 12h16M4 16h16" stroke-linecap="round"/>
                 </svg>
               </div>
@@ -92,7 +92,7 @@
   
             <div class="bg-white rounded-xl shadow-sm p-4 flex flex-col items-center">
               <div class="w-8 h-8 mb-2">
-                <svg class="text-teal-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg class="text-[#050A30] " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <rect x="4" y="4" width="16" height="16" rx="2"/>
                   <path d="M8 8h8M8 12h8M8 16h4" stroke-linecap="round"/>
                 </svg>
