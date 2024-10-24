@@ -71,12 +71,11 @@
           Get in Touch
         </a>
       </div>
-
     </nav>
   </header>
 
   <section class="relative">
-    <div class="bg-[#050A30] pt-32 md:pt-40 pb-32 md:pb-48">
+    <div class="bg-[#050A30] pt-32 md:pt-40 pb-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center">
           <!-- Texto centrado en pantallas pequeñas y alineado a la izquierda en pantallas grandes -->
@@ -84,8 +83,8 @@
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
               Grow Your Career<br>by Joining Koombea
             </h1>
-            <p class="text-lg md:text-xl text-center  text-white mb-8">
-              Koombea is an incredibly fun and fast-paced place to work, where the<br>
+            <p class="text-lg md:text-xl text-center md:text-left text-white mb-8">
+              Koombea is an incredibly fun and fast-paced place to work, where the<br class="hidden md:inline">
               only currency that matters is the ability to be creative and drive results.
             </p>
             <button
@@ -125,34 +124,35 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Ocultar ola en dispositivos móviles (pantallas pequeñas) -->
-  <div class="absolute bottom-0 left-0 right-0 h-100 md:h-48 overflow-hidden z-10 hidden md:block">
-    <svg viewBox="0 0 1440 320" class="wave" preserveAspectRatio="none">
-      <path :d="wavePath" fill="#FFFFFF" fill-opacity="1"></path>
-    </svg>
-  </div>
+    <!-- Contenedor para la ola y el texto -->
+    <div class="relative">
+      <!-- Ola -->
+      <div class="absolute bottom-0 left-0 right-0 h-24 md:h-48 overflow-hidden">
+        <svg viewBox="0 0 1440 320" class="wave" preserveAspectRatio="none">
+          <path :d="wavePath" fill="#FFFFFF" fill-opacity="1"></path>
+        </svg>
+      </div>
 
-  <div>
-    <div class="flex flex-col md:flex-row md:items-center items-center justify-center pt-14 px-4">
-      <p class="text-xl font-bold text-teal-900 text-center align-center items-center">Koombea is an incredibly fun and
-        fast-paced place to work, where the only <br class="mr-2"> currency that matters is the ability to be creative
-        and drive results.</p>
+      <!-- Texto sobre la ola -->
+      <div class="relative z-20 bg-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p class="text-xl font-bold text-teal-900 text-center">
+            Koombea is an incredibly fun and fast-paced place to work, where the only <br class="hidden md:inline">
+            currency that matters is the ability to be creative and drive results.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import { ref } from 'vue'
-
-// Estado del menú
-const isMenuOpen = ref(false)
-
 export default {
   data() {
     return {
       isAtTop: true,
+      isMenuOpen: false,
       wavePath: '',
       animationFrame: null
     };
@@ -161,7 +161,7 @@ export default {
     window.addEventListener('scroll', this.handleScroll);
     this.animateWave();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
     cancelAnimationFrame(this.animationFrame);
   },
@@ -171,17 +171,16 @@ export default {
     },
     animateWave() {
       const animate = () => {
-        const time = Date.now() * 0.00035;
-        let path = 'M0,320 ';
-        for (let i = 0; i <= 1440; i += 20) {
+        const time = Date.now() * 0.00025; // Reducido para un movimiento más lento
+        let path = 'M0,160 ';
+        for (let i = 0; i <= 1440; i += 10) {
           const x = i;
-          const y = Math.sin(i * 0.003 + time) * 40 +
-            Math.sin(i * 0.007 - time * 0.6) * 27 +
-            Math.sin(i * 0.0015 + time * 0.3) * 15 + // Nueva onda más lenta
-            200; // Ajustado para que la ola sea más visible
+          const y = Math.sin(i * 0.0025 + time) * 20 +
+            Math.sin(i * 0.005 - time * 0.5) * 15 +
+            140; // Ajustado para que la ola sea más visible
           path += `L${x},${y} `;
         }
-        path += 'L1440,320 L0,320 Z';
+        path += 'L1440,160 L1440,320 L0,320 Z';
         this.wavePath = path;
         this.animationFrame = requestAnimationFrame(animate);
       };
@@ -205,7 +204,6 @@ export default {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-50%);
   }

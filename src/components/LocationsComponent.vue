@@ -39,7 +39,7 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Barranquilla</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Barranquilla</h3>
                 </div>
 
                 <!-- Chicago -->
@@ -63,7 +63,7 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Chicago</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Chicago</h3>
                 </div>
 
                 <!-- Miami -->
@@ -110,7 +110,7 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">Miami</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">Miami</h3>
                 </div>
 
                 <!-- New York -->
@@ -162,7 +162,7 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">New York</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">New York</h3>
                 </div>
 
                 <!-- San Francisco -->
@@ -222,7 +222,7 @@
                             </g>
                         </svg>
                     </div>
-                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center">San Francisco</h3>
+                    <h3 class="text-lg md:text-xl font-semibold text-[#003543] text-center hover:text-[#0bd8a2]">San Francisco</h3>
                 </div>
             </div>
         </div>
