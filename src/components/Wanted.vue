@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto sm:px-4 px-6 py-16">
       <div class="flex flex-col lg:flex-row gap-16">
         <!-- Image Column -->
-        <div class="lg:w-1/2">
+        <div class="w-full lg:w-4/12 flex justify-center lg:justify-start mb-8 lg:mb-0">
           <img 
             src="../assets/img/cafe.jpg" 
             alt="Koombea team member"

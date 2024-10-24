@@ -1,12 +1,16 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out"
+ <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out"
     :class="{ 'bg-white shadow-md': !isAtTop }">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex items-center justify-between w-full">
         <!-- Logo alineado a la izquierda -->
-        <div class="flex-shrink-0">
-          <img class="h-24 sm:h-20 w-auto" src="../assets/logo.jpeg" alt="Koombea Logo">
+        <div class="flex items-center space-x-2">
+          <img class="h-24 sm:h-20 w-auto" src="../assets/img/logo.png" alt="Koombea Logo">
+          <span :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="text-xl font-bold">
+            AQUARIUM
+          </span>
         </div>
+
 
         <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
         <div class="md:hidden">
@@ -204,6 +208,7 @@ export default {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
