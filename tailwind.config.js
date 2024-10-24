@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
+        custom: ['"GT Walsheim"', 'Arial', 'gadget', 'sans-serif'], // Aquí agregas la fuente
       },
     },
   }, 
