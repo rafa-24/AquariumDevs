@@ -11,7 +11,6 @@
           </span>
         </div>
 
-
         <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
         <div class="md:hidden">
           <button @click="isMenuOpen = !isMenuOpen" class="text-white focus:outline-none">
@@ -36,13 +35,10 @@
             class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">About</a>
           <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
             class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Blog</a>
-            <router-link 
-    to="/portfolio" 
-    class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium"
-    :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }">
-    Portafolio
-  </router-link>
-
+          <router-link to="/portfolio" class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium"
+            :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }">
+            Portafolio
+          </router-link>
 
           <a href="#_"
             class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base tracking-tighter text-gray-900 bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white">
@@ -51,7 +47,8 @@
             <span class="relative z-10 transition-colors duration-300 ease-out font-bold">Get in Touch</span>
           </a>
 
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="transition duration-300 hover:text-[#323232]">
+          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+            class="transition duration-300 hover:text-[#323232]">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,10 +83,12 @@
   </header>
 
   <section class="relative">
-    <div class="bg-[#050A30] pt-32 md:pt-40 pb-32">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Fondo azul que ocupa todo el espacio necesario -->
+    <div class="bg-[#050A30] min-h-[900px] relative">
+      <!-- Contenido principal -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-40">
         <div class="flex flex-col md:flex-row items-center">
-          <!-- Texto centrado en pantallas pequeñas y alineado a la izquierda en pantallas grandes -->
+          <!-- Texto -->
           <div class="md:w-1/2 text-center md:text-left md:pr-8">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
               Grow Your Career<br>by Joining Koombea
@@ -107,10 +106,10 @@
           </div>
 
           <!-- Imagen SVG ajustada a la derecha y oculta en pantallas pequeñas -->
-          <div class="hidden md:block ml-13 md:w-1/2 mt-8 md:mt-0">
+          <div class="hidden md:block ml-13 md:w-1/2 mt-8 md:mt-0 relative z-20">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1451 1607" width="1451" height="1607"
               preserveAspectRatio="xMidYMid meet"
-              style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px); z-index: 30;">
+              style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px);">
               <defs>
                 <clipPath id="__lottie_element_28">
                   <rect width="1451" height="1607" x="0" y="0"></rect>
@@ -134,101 +133,47 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Contenedor para la ola y el texto -->
-    <div class="relative">
-      <!-- Ola -->
-      <div class="absolute bottom-0 left-0 right-0 h-24 md:h-48 overflow-hidden">
-        <svg viewBox="0 0 1440 320" class="wave" preserveAspectRatio="none">
-          <path :d="wavePath" fill="#FFFFFF" fill-opacity="1"></path>
+      <!-- Nueva curva en la parte inferior -->
+      <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-10">
+        <svg viewBox="0 0 1440 600" class="w-full h-auto" preserveAspectRatio="none">
+          <path d="M0,400 C300,400 700,400 1000,200 C1200,50 1380,40 1440,30 L1440,600 L0,600 Z" fill="#ffffff"></path>
         </svg>
       </div>
+    </div>
 
-      <!-- Texto sobre la ola -->
-      <div class="relative z-20 bg-white pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p class="text-xl font-bold text-teal-900 text-center">
-            Koombea is an incredibly fun and fast-paced place to work, where the only <br class="hidden md:inline">
-            currency that matters is the ability to be creative and drive results.
-          </p>
-        </div>
+    <!-- Contenido blanco -->
+    <div class="bg-white pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-xl font-bold text-teal-900 text-center">
+          Koombea is an incredibly fun and fast-paced place to work, where the only <br class="hidden md:inline">
+          currency that matters is the ability to be creative and drive results.
+        </p>
       </div>
-
     </div>
   </section>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
       isAtTop: true,
-      isMenuOpen: false,
-      wavePath: '',
-      animationFrame: null
+      isMenuOpen: false
     };
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
-    this.animateWave();
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-    cancelAnimationFrame(this.animationFrame);
   },
   methods: {
     handleScroll() {
       this.isAtTop = window.scrollY === 0;
-    },
-    animateWave() {
-      const animate = () => {
-        const time = Date.now() * 0.00025; // Reducido para un movimiento más lento
-        let path = 'M0,160 ';
-        for (let i = 0; i <= 1440; i += 10) {
-          const x = i;
-          const y = Math.sin(i * 0.0025 + time) * 20 +
-            Math.sin(i * 0.005 - time * 0.5) * 15 +
-            140; // Ajustado para que la ola sea más visible
-          path += `L${x},${y} `;
-        }
-        path += 'L1440,160 L1440,320 L0,320 Z';
-        this.wavePath = path;
-        this.animationFrame = requestAnimationFrame(animate);
-      };
-      animate();
     }
   }
 };
 </script>
 
-<style>
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  transform: translateY(0);
-}
-
-@keyframes continuous-horizontal-movement {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.wave {
-  animation: continuous-horizontal-movement 40s linear infinite;
-}
-
-/* Aplicar la fuente a todo el componente */
-div {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-</style>
+<style scoped></style>
