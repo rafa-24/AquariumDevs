@@ -36,12 +36,13 @@
             class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">About</a>
           <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
             class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Blog</a>
-            <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">
-            <router-link to="/portfolio">
-              Portafolio
-            </router-link>
-          </a>
+            <router-link 
+    to="/portfolio" 
+    class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium"
+    :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }">
+    Portafolio
+  </router-link>
+
 
           <a href="#_"
             class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base tracking-tighter text-gray-900 bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white">

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../App.vue'; // o el componente principal de tu página
-import Portfolio from '../components/Portafolio.vue'; // tu nueva página Portafolio
+import Home from '../views/Home.vue';
+import Portafolio from '../components/Portafolio.vue';
 
 const routes = [
   {
@@ -10,8 +10,8 @@ const routes = [
   },
   {
     path: '/portfolio',
-    name: 'Portfolio',
-    component: Portfolio // Página del portafolio
+    name: 'Portafolio',
+    component: Portafolio
   }
 ];
 
