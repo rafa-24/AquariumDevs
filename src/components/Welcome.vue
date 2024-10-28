@@ -1,4 +1,13 @@
 <template>
+        <!-- Contenido blanco -->
+        <div class="bg-white pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-32 z-20 relative">
+          <p class="text-xl font-bold text-teal-900 text-center">
+            Koombea is an incredibly fun and fast-paced place to work, where the only <br class="hidden md:inline">
+            currency that matters is the ability to be creative and drive results.
+          </p>
+        </div>
+      </div>
   <div class="max-w-5xl mx-auto text-center mb-16">
     <div class="flex items-center justify-center mb-20 sm:mb-24">
       <div class="h-0.5 bg-teal-400 w-72"></div>

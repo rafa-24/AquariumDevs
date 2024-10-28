@@ -91,11 +91,10 @@
           <!-- Texto -->
           <div class="md:w-1/2 text-center md:text-left md:pr-8">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
-              Grow Your Career<br>by Joining Koombea
+              {{ title }}
             </h1>
             <p class="text-lg md:text-xl text-center md:text-left text-white mb-8">
-              Koombea is an incredibly fun and fast-paced place to work, where the
-              only currency that matters is the ability to be creative and drive results.
+              {{ description }}
             </p>
             <button
               class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base tracking-tighter text-[#050A30] bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
@@ -107,48 +106,33 @@
 
           <!-- Imagen SVG ajustada a la derecha y oculta en pantallas pequeñas -->
           <div class="hidden md:block ml-13 md:w-1/2 mt-8 md:mt-0 relative z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1451 1607" width="1451" height="1607"
-              preserveAspectRatio="xMidYMid meet"
-              style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px);">
-              <defs>
-                <clipPath id="__lottie_element_28">
-                  <rect width="1451" height="1607" x="0" y="0"></rect>
-                </clipPath>
-              </defs>
-              <g clip-path="url(#__lottie_element_28)">
-                <g class="png" style="display: block;" transform="matrix(1,0,0,1,0,0)" opacity="1">
-                  <image width="1451px" height="1607px" preserveAspectRatio="xMidYMid slice"
-                    xlink:href="https://www.koombea.com/wp-content/uploads/2022/01/home-main-banner-img_2.webp"></image>
-                </g>
-                <g class="psd" transform="matrix(1,0,0,1,0,0)" opacity="1" style="display: block;">
-                  <image width="1451px" height="1607px" preserveAspectRatio="xMidYMid slice"
-                    xlink:href="https://www.koombea.com/wp-content/uploads/2022/01/home-main-banner-img_1.webp"></image>
-                </g>
-                <g class="psd" transform="matrix(1,0,0,1,-44,22)" opacity="1" style="display: block;">
-                  <image width="1451px" height="1607px" preserveAspectRatio="xMidYMid slice"
-                    xlink:href="https://www.koombea.com/wp-content/uploads/2022/01/home-main-banner-img_0.webp"></image>
-                </g>
-              </g>
-            </svg>
-          </div>
+    <svg xmlns="http://www.w3.org/2000/svg" :viewBox="svgViewBox" :width="svgWidth" :height="svgHeight"
+      preserveAspectRatio="xMidYMid meet" style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+      <defs>
+        <clipPath id="__lottie_element_28">
+          <rect width="1451" height="1607" x="0" y="0"></rect>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#__lottie_element_28)">
+        <g class="png" style="display: block;" transform="matrix(1,0,0,1,0,0)" opacity="1">
+          <image :width="svgWidth" :height="svgHeight" preserveAspectRatio="xMidYMid slice" :xlink:href="imageUrl">
+          </image>
+        </g>
+      </g>
+    </svg>
+  </div>
         </div>
       </div>
 
       <!-- Nueva curva en la parte inferior -->
       <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-10">
-        <svg viewBox="0 0 1440 600" class="w-full h-auto" preserveAspectRatio="none">
-          <path d="M0,400 C300,400 700,400 1000,200 C1200,50 1380,40 1440,30 L1440,600 L0,600 Z" fill="#ffffff"></path>
+        <svg viewBox="0 0 1440 200" class="w-full h-auto md:hidden" preserveAspectRatio="none">
+          <path d="M0,120 C300,120 700,120 1000,60 C1200,20 1380,10 1440,0 L1440,200 L0,200 Z" fill="#ffffff"></path>
         </svg>
-      </div>
-    </div>
-
-    <!-- Contenido blanco -->
-    <div class="bg-white pb-24">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p class="text-xl font-bold text-teal-900 text-center">
-          Koombea is an incredibly fun and fast-paced place to work, where the only <br class="hidden md:inline">
-          currency that matters is the ability to be creative and drive results.
-        </p>
+        <svg viewBox="0 0 1440 600" class="w-full h-auto hidden md:block" preserveAspectRatio="none">
+          <path d="M0,400 C300,400 700,400 1000,200 C1200,50 1380,40 1440,30 L1440,600 L0,600 Z" fill="#ffffff">
+          </path>
+        </svg>
       </div>
     </div>
   </section>
@@ -156,24 +140,35 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isAtTop: true,
-      isMenuOpen: false
-    };
+props: {
+  title: String,
+  description: String,
+  buttonText: String,
+  buttonAction: Function,
+  svgWidth: { type: String, default: "1451" },
+  svgHeight: { type: String, default: "1607" },
+  svgViewBox: { type: String, default: "0 0 1451 1607" },
+  imageUrl: { type: String, required: true },
+},
+data() {
+  return {
+    isAtTop: true,
+    isMenuOpen: false,
+  };
+},
+mounted() {
+  window.addEventListener("scroll", this.handleScroll);
+},
+beforeUnmount() {
+  window.removeEventListener("scroll", this.handleScroll);
+},
+methods: {
+  handleScroll() {
+    this.isAtTop = window.scrollY === 0;
   },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.isAtTop = window.scrollY === 0;
-    }
-  }
+},
 };
+
 </script>
 
 <style scoped></style>
