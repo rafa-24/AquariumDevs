@@ -64,7 +64,7 @@
                 </g>
             </svg>
             <div class="flex items-center justify-center mb-20 sm:mb-24">
-                <h2 class="text-5xl font-bold text-teal-900 px-8">
+                <h2 class="text-4xl font-bold text-teal-900 px-8">
                     Collaborative & AI-Enhanced Approach
                 </h2>
             </div>

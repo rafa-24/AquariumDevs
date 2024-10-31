@@ -1,86 +1,107 @@
 <template>
   <header class="fixed top-0 left-0 right-0 z-50 transition duration-300 ease-in-out font-plus-jakarta-sans"
-    :class="{ 'bg-white shadow-md': !isAtTop }">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex items-center justify-between w-full">
-        <!-- Logo alineado a la izquierda -->
-        <div class="flex items-center space-x-2">
-          <img class="h-24 sm:h-20 w-auto" src="../assets/img/logo.png" alt="Koombea Logo">
-          <span :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="text-xl font-bold">
-            AQUARIUM
-          </span>
-        </div>
-
-        <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
-        <div class="md:hidden">
-          <button @click="isMenuOpen = !isMenuOpen" class="text-white focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
-
-        <!-- Menú de navegación visible en pantallas medianas y más grandes -->
-        <div :class="{ 'hidden': !isMenuOpen }" class="hidden md:flex items-center space-x-6 ml-auto">
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Services</a>
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Our Work</a>
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Careers</a>
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">About</a>
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium">Blog</a>
-          <router-link to="/portfolio" class="hover:text-[#c1e8ff] px-3 py-2 rounded-md text-base font-medium"
-            :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }">
-            Portafolio
-          </router-link>
-
-          <a href="#_"
-            class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base tracking-tighter text-gray-900 bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white">
-            <span
-              class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#323232] rounded-full group-hover:w-56 group-hover:h-56"></span>
-            <span class="relative z-10 transition-colors duration-300 ease-out font-bold">Get in Touch</span>
-          </a>
-
-          <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
-            class="transition duration-300 hover:text-[#323232]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-          </a>
-        </div>
+  :class="{ 'bg-white shadow-md': !isAtTop }">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between w-full">
+      <!-- Logo alineado a la izquierda -->
+      <div class="flex items-center space-x-2">
+        <img class="h-16 sm:h-20 w-auto" src="../assets/img/logo.png" alt="Koombea Logo">
+        <span :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" class="text-xl font-bold">
+          AQUARIUM
+        </span>
       </div>
 
-      <!-- Menú desplegable solo visible en pantallas pequeñas cuando se abre -->
-      <div :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }"
-        class="absolute top-0 left-0 w-full bg-[#050A30] md:hidden z-40">
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">Home</a>
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">Services</a>
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">Our
-          Work</a>
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">Careers</a>
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">About</a>
-        <a href="#"
-          class="block px-6 py-4 border-b border-gray-600 text-base font-medium text-white hover:bg-gray-700">Blog</a>
-        <a href="#_"
-          class="block px-6 py-4 mt-4 font-semibold text-base tracking-tighter text-gray-900 bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white mx-auto">
-          Get in Touch
+      <!-- Botón hamburguesa solo visible en pantallas pequeñas -->
+      <div class="block md:hidden">
+        <button @click="isMenuOpen = !isMenuOpen" 
+          :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }" 
+          class="focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16m-7 6h7" />
+            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menú de navegación para desktop -->
+      <div class="hidden md:flex items-center space-x-4 ml-auto">
+        <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">Services</a>
+        <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">Our Work</a>
+        <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">Careers</a>
+        <!-- <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">About</a> -->
+        <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">Blog</a>
+        <router-link to="/portfolio" 
+          :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200">
+          Portafolio
+        </router-link>
+
+        <!-- <a href="#_"
+          class="relative inline-flex items-center justify-center px-4 lg:px-6 py-2 overflow-hidden font-semibold text-sm lg:text-base tracking-tighter text-gray-900 bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white transition-all duration-200">
+          <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-gray-900 rounded-full group-hover:w-56 group-hover:h-56"></span>
+          <span class="relative z-10 transition-colors duration-300 ease-out font-bold whitespace-nowrap">Get in Touch</span>
+        </a> -->
+
+        <a href="#" :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
+          class="transition duration-300 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
         </a>
       </div>
-    </nav>
-  </header>
+    </div>
+
+    <!-- Menú móvil -->
+    <transition
+      enter-active-class="transition-all duration-300 ease-out"
+      enter-from-class="opacity-0 -translate-y-4"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition-all duration-200 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 -translate-y-4"
+    >
+      <div v-if="isMenuOpen"
+        class="absolute top-full left-0 w-full bg-gray-900 md:hidden transform origin-top shadow-lg">
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            Services
+          </a>
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            Our Work
+          </a>
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            Careers
+          </a>
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            About
+          </a>
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            Blog
+          </a>
+          <a href="#" class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors duration-200">
+            Portafolio
+          </a>
+          <!-- <div class="pt-4">
+            <a href="#_"
+              class="block w-full text-center px-4 py-3 text-gray-900 bg-white rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+              Get in Touch
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </transition>
+  </nav>
+</header>
 
   <section class="relative">
     <!-- Fondo azul que ocupa todo el espacio necesario -->
@@ -106,21 +127,23 @@
 
           <!-- Imagen SVG ajustada a la derecha y oculta en pantallas pequeñas -->
           <div class="hidden md:block ml-13 md:w-1/2 mt-8 md:mt-0 relative z-20">
-    <svg xmlns="http://www.w3.org/2000/svg" :viewBox="svgViewBox" :width="svgWidth" :height="svgHeight"
-      preserveAspectRatio="xMidYMid meet" style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px);">
-      <defs>
-        <clipPath id="__lottie_element_28">
-          <rect width="1451" height="1607" x="0" y="0"></rect>
-        </clipPath>
-      </defs>
-      <g clip-path="url(#__lottie_element_28)">
-        <g class="png" style="display: block;" transform="matrix(1,0,0,1,0,0)" opacity="1">
-          <image :width="svgWidth" :height="svgHeight" preserveAspectRatio="xMidYMid slice" :xlink:href="imageUrl">
-          </image>
-        </g>
-      </g>
-    </svg>
-  </div>
+            <svg xmlns="http://www.w3.org/2000/svg" :viewBox="svgViewBox" :width="svgWidth" :height="svgHeight"
+              preserveAspectRatio="xMidYMid meet"
+              style="width: 80%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+              <defs>
+                <clipPath id="__lottie_element_28">
+                  <rect width="1451" height="1607" x="0" y="0"></rect>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#__lottie_element_28)">
+                <g class="png" style="display: block;" transform="matrix(1,0,0,1,0,0)" opacity="1">
+                  <image :width="svgWidth" :height="svgHeight" preserveAspectRatio="xMidYMid slice"
+                    :xlink:href="imageUrl">
+                  </image>
+                </g>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
 
@@ -140,33 +163,33 @@
 
 <script>
 export default {
-props: {
-  title: String,
-  description: String,
-  buttonText: String,
-  buttonAction: Function,
-  svgWidth: { type: String, default: "1451" },
-  svgHeight: { type: String, default: "1607" },
-  svgViewBox: { type: String, default: "0 0 1451 1607" },
-  imageUrl: { type: String, required: true },
-},
-data() {
-  return {
-    isAtTop: true,
-    isMenuOpen: false,
-  };
-},
-mounted() {
-  window.addEventListener("scroll", this.handleScroll);
-},
-beforeUnmount() {
-  window.removeEventListener("scroll", this.handleScroll);
-},
-methods: {
-  handleScroll() {
-    this.isAtTop = window.scrollY === 0;
+  props: {
+    title: String,
+    description: String,
+    buttonText: String,
+    buttonAction: Function,
+    svgWidth: { type: String, default: "1451" },
+    svgHeight: { type: String, default: "1607" },
+    svgViewBox: { type: String, default: "0 0 1451 1607" },
+    imageUrl: { type: String, required: true },
   },
-},
+  data() {
+    return {
+      isAtTop: true,
+      isMenuOpen: false,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isAtTop = window.scrollY === 0;
+    },
+  },
 };
 
 </script>

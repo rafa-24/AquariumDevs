@@ -22,7 +22,7 @@
         </div>
 
         <!-- Divider line (vertical) -->
-        <div class="border-l border-gray-900 mx-12"></div>
+        <div class="border-l border-gray-900 mx-4"></div>
 
         <!-- Navigation Sections -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-12">

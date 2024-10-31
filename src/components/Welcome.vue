@@ -11,7 +11,7 @@
   <div class="max-w-5xl mx-auto text-center mb-16">
     <div class="flex items-center justify-center mb-20 sm:mb-24">
       <div class="h-0.5 bg-teal-400 w-72"></div>
-      <h2 class="text-5xl font-bold text-teal-900 px-8">Transforming Businesses with Innovative Software Solutions</h2>
+      <h2 class="text-5xl font-bold text-teal-900 px-2">Transforming Businesses with Innovative Software Solutions</h2>
       <div class="h-0.5 bg-teal-400 w-72"></div>
     </div>
     <p class="text-lg md:text-xl text-[#003543] max-w-4xl mx-auto leading-relaxed">
