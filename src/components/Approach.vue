@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full py-16 px-4 md:px-8 bg-white font-plus-jakarta-sans">
+    <section class="w-full py-16 px-4 md:px-8 bg-white">
         <!-- Title Section -->
         <div class="max-w-5xl mx-auto text-center mb-16">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1696 1276" width="1696" height="1276"

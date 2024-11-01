@@ -105,10 +105,5 @@
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
-/* Aplicar la fuente a todo el componente */
-div {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
 </style>

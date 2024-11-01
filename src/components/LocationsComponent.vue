@@ -1,5 +1,5 @@
 <template>
-    <section class="w-full py-16 px-4 md:px-8 bg-white font-plus-jakarta-sans">
+    <section class="w-full py-16 px-4 md:px-8 bg-white">
         <!-- Title Section -->
         <div class="max-w-5xl mx-auto text-center mb-16">
             <div class="flex items-center justify-center mb-20 sm:mb-24">
