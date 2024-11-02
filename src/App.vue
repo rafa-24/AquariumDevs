@@ -2,7 +2,6 @@
   <div class="font-custom">
     <Banner
       :title="bannerTitle"
-      :description="bannerDescription"
       :buttonText="bannerButtonText"
       :buttonAction="bannerButtonAction"
       :imageUrl="bannerImageUrl"

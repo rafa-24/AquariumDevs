@@ -103,25 +103,26 @@
   </nav>
 </header>
 
-  <section class="relative">
+<section class="relative">
     <!-- Fondo azul que ocupa todo el espacio necesario -->
-    <div class="bg-[#050A30] min-h-[900px] relative">
+    <div class="bg-[#050A30] min-h-[600px] md:min-h-[900px] relative">
       <!-- Contenido principal -->
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-40">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 md:pt-40 pb-32">
         <div class="flex flex-col md:flex-row items-center">
           <!-- Texto -->
           <div class="md:w-1/2 text-center md:text-left md:pr-8">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
               {{ title }}
             </h1>
-            <p class="text-lg md:text-xl text-center md:text-left text-white mb-8">
+            <p v-if="route.name === 'Portafolio'" class="text-lg md:text-xl text-center md:text-left text-white mb-8">
               {{ description }}
             </p>
             <button
+              @click="buttonAction"
               class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base tracking-tighter text-[#050A30] bg-white rounded-full group shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
               <span
                 class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#323232] rounded-full group-hover:w-56 group-hover:h-56"></span>
-              <span class="relative z-10 transition-colors duration-300 ease-out font-bold">SEE OPEN POSITIONS</span>
+              <span class="relative z-10 transition-colors duration-300 ease-out font-bold">{{ buttonText }}</span>
             </button>
           </div>
 
@@ -148,50 +149,82 @@
       </div>
 
       <!-- Nueva curva en la parte inferior -->
-      <div class="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-10">
+      <div class="absolute -bottom-1 left-0 right-0 w-full overflow-hidden z-10">
         <svg viewBox="0 0 1440 200" class="w-full h-auto md:hidden" preserveAspectRatio="none">
           <path d="M0,120 C300,120 700,120 1000,60 C1200,20 1380,10 1440,0 L1440,200 L0,200 Z" fill="#ffffff"></path>
         </svg>
         <svg viewBox="0 0 1440 600" class="w-full h-auto hidden md:block" preserveAspectRatio="none">
-          <path d="M0,400 C300,400 700,400 1000,200 C1200,50 1380,40 1440,30 L1440,600 L0,600 Z" fill="#ffffff">
-          </path>
+          <path d="M0,400 C300,400 700,400 1000,200 C1200,50 1380,40 1440,30 L1440,600 L0,600 Z" fill="#ffffff"></path>
         </svg>
+      </div>
+    </div>
+
+    <!-- Sección de descripción (solo para la página de careers) -->
+    <div v-if="route.name !== 'Portafolio'" class="bg-white py-16 md:py-8">
+      <div class="max-w-7xl mx-auto px-4 mt-2 sm:px-6 lg:px-8">
+        <p class="text-lg text-center text-gray-600">
+          {{ description }}
+        </p>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    title: String,
-    description: String,
-    buttonText: String,
-    buttonAction: Function,
-    svgWidth: { type: String, default: "1451" },
-    svgHeight: { type: String, default: "1607" },
-    svgViewBox: { type: String, default: "0 0 1451 1607" },
-    imageUrl: { type: String, required: true },
-  },
-  data() {
-    return {
-      isAtTop: true,
-      isMenuOpen: false,
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      this.isAtTop = window.scrollY === 0;
-    },
-  },
-};
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+import { useRoute } from 'vue-router';
 
+const route = useRoute();
+
+defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  buttonText: {
+    type: String,
+    required: true
+  },
+  buttonAction: {
+    type: Function,
+    required: true
+  },
+  svgWidth: {
+    type: String,
+    default: "1451"
+  },
+  svgHeight: {
+    type: String,
+    default: "1607"
+  },
+  svgViewBox: {
+    type: String,
+    default: "0 0 1451 1607"
+  },
+  imageUrl: {
+    type: String,
+    required: true
+  }
+});
+
+const isAtTop = ref(true);
+const isMenuOpen = ref(false);
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+
+const handleScroll = () => {
+  isAtTop.value = window.scrollY === 0;
+};
 </script>
 
 <style scoped></style>
