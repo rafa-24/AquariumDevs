@@ -59,7 +59,7 @@
             :class="{ 'text-white': isAtTop, 'text-gray-900': !isAtTop }"
             class="hover:text-blue-200 px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors duration-200"
           >
-            <router-link to="/">Inicio</router-link>
+            <router-link to="/">inicio</router-link>
           </a>
 
           <a
