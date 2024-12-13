@@ -1,20 +1,6 @@
 <template>
     <div class="max-w-7xl mx-auto px-4 py-16">
-      <!-- Open Positions Header -->
-      <div class="flex items-center justify-center mb-20 sm:mb-24">
-        <div class="h-0.5 bg-teal-400 w-72"></div>
-        <h2 class="text-5xl font-bold text-teal-900 px-8">Open Positions</h2>
-        <div class="h-0.5 bg-teal-400 w-72"></div>
-      </div>
-  
-      <!-- Glassdoor Reviews Section -->
-      <div class="mb-14">
-        <div class="flex items-center">
-          <h3 class="text-5xl font-bold text-teal-900">Glassdoor Reviews</h3>
-          <div class="h-0.5 bg-teal-400 w-full ml-4"></div>
-        </div>
-      </div>
-  
+
       <!-- Reviews Content -->
       <div class="flex flex-col md:flex-row md:items-center gap-16 items-center justify-center">
         <!-- CEO Profile -->
@@ -23,15 +9,15 @@
             <div class="absolute inset-0">
               <div class="w-full h-full rounded-full border-2 border-[#050A30] "></div>
             </div>
-            <img 
-              src="../assets/img/perfil.jpg" 
+            <img
+              src="../assets/img/pictureceo.jpg"
               alt="Jonathan Tarud"
               class="w-full h-full rounded-full object-cover"
             />
           </div>
           <div>
-            <h4 class="text-2xl md:text-3xl font-bold text-teal-900">Jonathan Tarud</h4>
-            <p class="text-lg text-gray-600 mb-2">CEO, Koombea</p>
+            <h4 class="text-2xl md:text-3xl font-bold text-teal-900">Rafael Prieto Gonzalez</h4>
+            <p class="text-lg text-gray-600 mb-2">CEO, AquariumDevs</p>
             <div class="flex items-center gap-2">
               <span class="text-xl font-bold text-teal-900">4.6</span>
               <div class="flex">
@@ -45,7 +31,7 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Statistics -->
         <div class="flex flex-col md:flex-row gap-8 md:gap-16 mt-8 md:mt-0">
           <!-- Recommend to a friend -->
@@ -77,7 +63,7 @@
             </div>
             <span class="text-lg text-teal-900">Recommend to a friend</span>
           </div>
-  
+
           <!-- Approve of CEO -->
           <div class="flex flex-col items-center">
             <div class="relative w-24 h-24 mb-4">
@@ -111,18 +97,18 @@
       </div>
     </div>
   </template>
-  
+
   <script setup>
   // No additional script setup needed
   </script>
-  
+
   <style>
 
   /* Estilos para los círculos de progreso */
   circle {
     transition: stroke-dashoffset 0.8s ease-in-out;
   }
-  
+
   /* Media queries específicas */
   @media (max-width: 768px) {
     .statistics-container {

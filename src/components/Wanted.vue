@@ -11,11 +11,9 @@
         <!-- Text Section -->
         <div class="h-0.5 bg-teal-600 w-38 mb-6"></div>
         <div class="mb-16">
-          <h2 class="text-4xl font-bold text-teal-900 mb-4">Koombea's Team</h2>
+          <h2 class="text-4xl font-bold text-teal-900 mb-4">Aquarium Team</h2>
           <p class="text-gray-700 text-lg leading-relaxed mb-2 sm:mb-5">
-            Want to join an innovative team where you'll constantly be inspired by your co-workers and projects? Koombea
-            might be the perfect team for you! We admire and reward creativity and teamwork so check out some of our
-            career opportunities to see if there is a fit for you at our vibrant company. We'd love to hear from you!
+            ¿Quieres formar parte de un equipo innovador en el que tus compañeros y tus proyectos te inspiren constantemente? Aquarium puede ser el equipo perfecto para ti. Admiramos y recompensamos la creatividad y el trabajo en equipo, así que echa un vistazo a algunas de nuestras oportunidades profesionales para ver si encajas en nuestra vibrante empresa. ¡Estaremos encantados de conocerte!
           </p>
         </div>
 

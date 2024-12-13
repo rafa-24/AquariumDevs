@@ -5,10 +5,10 @@
     <Approach></Approach>
     <Wanted></Wanted>
     <MeetUs></MeetUs>
-    <Benefits></Benefits>
+
     <Positions></Positions>
   </template>
-  
+
   <script setup>
   import Welcome from '../components/Welcome.vue';
   import Wanted from '../components/Wanted.vue';
@@ -19,7 +19,7 @@
   import LocationsComponent from '../components/LocationsComponent.vue';
   import MeetUs from '../components/MeetUs.vue';
   </script>
-  
+
   <style scoped>
   /* Add any additional custom styles here if needed */
   </style>

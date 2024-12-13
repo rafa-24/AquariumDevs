@@ -9,8 +9,7 @@
 
     <!-- Description text -->
     <p class="text-center text-gray-700 max-w-3xl mx-auto mb-12 text-lg">
-      We are a big family of geeks who are passionate about all things technology-related. Our drive is
-      our desire to innovate. Our culture stands on the pillars of respect and discipline.
+      Somos una gran familia de frikis apasionados por todo lo relacionado con la tecnología. Nuestro motor es el deseo de innovar. Nuestra cultura se asienta sobre los pilares del respeto y la disciplina.
     </p>
 
     <!-- Image grid container -->

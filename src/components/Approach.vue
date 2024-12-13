@@ -65,12 +65,11 @@
             </svg>
             <div class="flex items-center justify-center mb-20 sm:mb-24">
                 <h2 class="text-4xl font-bold text-teal-900 px-8">
-                    Collaborative & AI-Enhanced Approach
+                    Enfoque colaborativo y mejorado con IA
                 </h2>
             </div>
             <p class="text-lg md:text-xl text-[#003543] max-w-4xl mx-auto leading-relaxed font-bold">
-                Our custom Agile and AI-integrated development process increases control, reduces risks, and boosts
-                transparency, achieving ambitious timelines for enterprises and startups.
+                Nuestro proceso de desarrollo ágil personalizado e integrado con IA aumenta el control, reduce los riesgos e impulsa la transparencia, logrando plazos ambiciosos para empresas y startups.
             </p>
         </div>
 
@@ -81,10 +80,9 @@
                 <img class="w-16 h-16 mb-4"
                     src="https://www.koombea.com/wp-content/themes/koombea/dist/images/enterprise-solutions-3439ccdadc616ca71064f465a2a9eeab.svg"
                     alt="Solutions Icon" />
-                <h3 class="text-xl font-semibold mb-2 text-teal-900">Solutions for Enterprises and Startups</h3>
+                <h3 class="text-xl font-semibold mb-2 text-teal-900">Soluciones para empresas y nuevas empresas</h3>
                 <p class="text-gray-600">
-                    We tackle design and technical challenges, identify risks, and craft a solid foundation for your
-                    product, ensuring alignment with budget, timeline, and advanced technologies.
+                    Abordamos los retos técnicos y de diseño, identificamos los riesgos y creamos una base sólida para su producto.  garantizando la alineación con el presupuesto, los plazos y las tecnologías avanzadas.
                 </p>
             </div>
 
@@ -93,10 +91,10 @@
                 <img class="w-16 h-16 mb-4"
                     src="https://www.koombea.com/wp-content/themes/koombea/dist/images/w&m-development-a5548cf490bd5044590e4d74361d3c0c.svg"
                     alt="Web & Mobile Icon" />
-                <h3 class="text-xl font-semibold mb-2 text-teal-900">Web & Mobile App Development</h3>
+                <h3 class="text-xl font-semibold mb-2 text-teal-900">Desarrollo de aplicaciones web y móviles</h3>
                 <p class="text-gray-600">
-                    Our development teams are skilled in leveraging AI alongside languages like Ruby on Rails, Kotlin,
-                    and Swift, ensuring on-time delivery of scalable apps that support continuous improvement.
+                    Nuestros equipos de desarrollo están capacitados para aprovechar la IA junto con lenguajes como TypeScript, Nestjs , Vue, Nuxt, Flutter
+                    y python, garantizando la entrega puntual de aplicaciones escalables que apoyan la mejora continua.
                 </p>
             </div>
 
@@ -105,16 +103,16 @@
                 <img class="w-16 h-16 mb-4"
                     src="https://www.koombea.com/wp-content/themes/koombea/dist/images/design-d045639e23f5cba95b3fa1cd1375765e.svg"
                     alt="Product Design Icon" />
-                <h3 class="text-xl  font-semibold mb-2 text-teal-900">Product Design</h3>
+                <h3 class="text-xl  font-semibold mb-2 text-teal-900">Diseño de productos</h3>
                 <p class="text-gray-600">
-                    Innovative digital experiences are at the heart of our app development, with AI-driven insights
-                    informing wireframes, user flows, and prototyping for an impactful User Experience.
+                    Las experiencias digitales innovadoras están en el centro de nuestro desarrollo de aplicaciones, con conocimientos basados en IA que informan los esquemas, los flujos de usuario y la creación de prototipos para una experiencia de usuario impactante.
                 </p>
             </div>
 
         </div>
         <div class="flex justify-center items-center py-8">
             <button
+                @click="getInTouch()"
                 class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-semibold text-base text-white bg-[#0bd8a2] rounded-full group shadow-lg hover:bg-gray-500 hover:text-white transition duration-300">
                 <span
                     class="absolute w-0 h-0 transition-all duration-500 ease-out bg-[#323232] rounded-full group-hover:w-56 group-hover:h-56"></span>
@@ -125,6 +123,20 @@
     </section>
 </template>
 
-<script lang="ts" setup>
-// No additional script logic needed at this point
+<script>
+export default {
+    data() {
+        return {
+            urlWapp: 'https://web.whatsapp.com/'
+        }
+    },
+    methods: {
+        getInTouch() {
+            window.open(this.urlWapp, '_blank')
+        }
+    }
+}
+
+
+
 </script>

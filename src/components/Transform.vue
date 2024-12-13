@@ -5,12 +5,12 @@
             <!-- Contenido de texto -->
             <div class="md:w-1/2 text-center md:text-left md:pr-8 md:pl-8 pl-8">
                 <h2 class="text-4xl font-bold text-teal-900 mb-4">
-                    AI-Driven Transformation for Dynamic Growth
+                    Transformación impulsada por la IA para un crecimiento dinámico
                 </h2>
                 <p class="text-lg md:text-xl text-[#003543] mb-8">
-                    Koombea redefines digital excellence, leveraging the transformative potential of AI and large
-                    language models (LLMs) like OpenAI to revolutionize your digital solutions. We enable AI digital transformations
-                    that streamline processes and enhance decision-making, unlocking new growth avenues for enterprises and startups.
+                    Koombea redefine la excelencia digital, aprovechando el potencial transformador de la IA y los grandes
+                    modelos de lenguaje (LLM) como OpenAI para revolucionar sus soluciones digitales. Permitimos transformaciones digitales de IA
+                    que agilizan los procesos y mejoran la toma de decisiones, desbloqueando nuevas vías de crecimiento para empresas y startups.
                 </p>
             </div>
 
